@@ -2,6 +2,7 @@ import company.beans.Person;
 import company.exceptions.InvalidAgeException;
 import company.implementations.EmailMessenger;
 import company.interfaces.Messenger;
+import company.utils.MathUtils;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,9 +16,12 @@ public class Main {
 
         }
 
+        int x = MathUtils.add(10,6);
+        System.out.println(x);
+
 
         EmailMessenger emailMessenger = new EmailMessenger();
-        emailMessenger.sendMessage("Witam i o zdrowie pytam.");
+        emailMessenger.sendMessage("Addition result:" + x);
 
     }
 
